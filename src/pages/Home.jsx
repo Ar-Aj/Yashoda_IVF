@@ -10,6 +10,7 @@ import StatsCounter from '../components/ui/StatsCounter';
 import Form from '../components/ui/Form';
 import FixedSocialSidebar from '../components/ui/FixedSocialSidebar';
 import FloatingContactButton from '../components/ui/FloatingContactButton';
+import AnimatedStatsCounter from '../components/ui/AnimatedStatsCounter';
 
 const Home = () => {
   // Doctor data
@@ -18,25 +19,25 @@ const Home = () => {
       name: "Dr. Balasaheb V Khadbade",
       credentials: "MBBS, MD",
       location: "Kamothe, Navi Mumbai",
-      imageSrc: "/assets/images/doctor-male-1.jpg"
+      imageSrc: "/assets/images/doctor-bala-1.jpg"
     },
     {
       name: "Dr. Snehalata B Khadbade",
       credentials: "MBBS, DGO",
       location: "Kamothe, Navi Mumbai",
-      imageSrc: "/assets/images/doctor-female-1.jpg"
+      imageSrc: "/assets/images/doctor-snehalata-1.jpg"
     },
     {
       name: "Dr. Sphurti Raghu",
       credentials: "MBBS, DNB",
       location: "Vashi, Navi Mumbai",
-      imageSrc: "/assets/images/doctor-female-2.jpg"
+      imageSrc: "/assets/images/doctor-sphurti-2.jpg"
     },
     {
       name: "Dr. Varsha Nimbalkar",
       credentials: "MBBS, MD",
       location: "Thane",
-      imageSrc: "/assets/images/doctor-female-3.jpg"
+      imageSrc: "/assets/images/doctor-varsha-3.jpg"
     }
   ];
 
@@ -182,7 +183,7 @@ const Home = () => {
             </div>
             <div className="md:w-1/2">
               <img 
-                src="/assets/images/clinic-interior.jpg" 
+                src="/assets/images/clinic-interior.jpeg" 
                 alt="Modern clinic waiting area" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
@@ -194,17 +195,7 @@ const Home = () => {
       {/* Stats Section */}
       <section className="py-16 bg-pink-500 text-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {stats.map((stat, index) => (
-              <div 
-                key={index} 
-                className={`text-center ${index < stats.length - 1 ? 'border-r border-white border-opacity-30' : ''}`}
-              >
-                <div className="text-2xl md:text-3xl font-bold mb-2">{stat.number}</div>
-                <div className="text-sm md:text-base opacity-90">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+          <AnimatedStatsCounter stats={stats} />
         </div>
       </section>
 

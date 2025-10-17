@@ -66,12 +66,12 @@ const IVF = () => {
   return (
     <main>
       {/* Section 1 — Hero */}
-      <section id="hero" className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] bg-cover bg-center" style={{ backgroundImage: "url('/assets/images/hero-hands-baby.jpg')" }}>
+      <section id="hero" className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] bg-cover bg-center" style={{ backgroundImage: "url('/assets/images/hero-services.jpeg')" }}>
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center pt-10 sm:pt-14 md:pt-16">
           <div className="bg-white bg-opacity-50 p-6 sm:p-8 rounded-lg inline-block">
             <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 text-center">
-              IVF – In Vitro Fertilization Treatment
+              IVF - In Vitro Fertilization Treatment
             </h1>
           </div>
         </div>
@@ -84,11 +84,13 @@ const IVF = () => {
             <div className="flex flex-col md:flex-row">
               <div className="md:w-2/5 relative">
                 <div className="absolute inset-0 bg-pink-100 opacity-20"></div>
-                <img 
-                  src="/assets/images/ivf-illustration.jpg" 
-                  alt="IVF illustration showing embryo dish and pregnant woman" 
-                  className="w-full h-48 md:h-full object-cover"
-                />
+                <div className="aspect-square w-full">
+                  <img 
+                    src="/assets/images/ivf.jpeg" 
+                    alt="IVF illustration showing embryo dish and pregnant woman" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div className="md:w-3/5 p-6">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is IVF?</h2>
