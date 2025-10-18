@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Button from '../components/ui/Button';
+import Button from '../../components/ui/Button';
 
-const ICSI = () => {
+const LaserAssistedHatching = () => {
   const [activeTab, setActiveTab] = useState('why');
   const tabListRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const tabs = [
     { id: 'why', label: 'Why' },
-    { id: 'risks', label: 'Risks' },
+    { id: 'treatment', label: 'Treatment' },
     { id: 'effects', label: 'Post Procedure Effects' },
     { id: 'success', label: 'Success Rate' }
   ];
@@ -17,43 +17,49 @@ const ICSI = () => {
     why: {
       content: [
         {
-          title: "Low Sperm Count:",
-          text: "ICSI helps in cases where sperm count is low, ensuring a higher chance of successful fertilization."
+          title: "Precise Embryo Enhancement:",
+          text: "Yashoda Fertility & IVF Centre employs laser-assisted hatching as a precise technique to aid embryo implantation. This procedure involves creating a small opening in the embryo's outer layer, facilitating better attachment to the uterine lining during IVF."
         },
         {
-          title: "Sperm Quality:",
-          text: "Helps bypass cervical mucus issues that might impede sperm movement."
+          title: "Advanced Technology:",
+          text: "We utilize state-of-the-art laser technology for this delicate procedure. The precision and accuracy of the laser ensure controlled and minimal manipulation, safeguarding the embryo's viability."
         },
         {
-          title: "Previous IVF Attempts:",
-          text: "ICSI might be recommended if previous IVF attempts have failed due to poor fertilization."
+          title: "Enhanced Implantation Rates:",
+          text: "Laser-assisted hatching has shown promising results in improving implantation rates during IVF cycles. This technique assists in creating an optimal environment for successful embryo attachment, thereby increasing the chances of conception."
         },
         {
-          title: "Unexplained Infertility:",
-          text: "It's useful in cases where the cause of infertility isn't clear, providing a direct method to achieve fertilization."
+          title: "Personalized Approach:",
+          text: "Our specialists tailor this procedure to suit each patient's specific needs, ensuring a higher probability of successful outcomes."
         },
         {
-          title: "Genetic Concerns:",
-          text: "ICSI can be employed for those with genetic concerns, allowing for specific sperm selection to avoid passing on certain genetic conditions."
+          title: "Comprehensive Expertise:",
+          text: "Our skilled team has extensive experience in performing laser-assisted hatching procedures. Their expertise, coupled with cutting-edge technology, ensures the highest standards of care and improved results for our patients."
+        },
+        {
+          title: "Supportive Environment:",
+          text: "Patients undergoing laser-assisted hatching at our centre receive comprehensive support and guidance throughout the process. We prioritize patient comfort and understanding, fostering a supportive environment for their fertility journey."
         }
       ]
     },
-    risks: {
+    treatment: {
       content: [
-        "Similar to standard IVF procedures, potential risks may include procedure-related discomfort, rare infection, and, where applicable, medication side effects. Your specialist will discuss personalized risk considerations."
+        "Embryo evaluation by the embryologist.",
+        "Micromanipulation workstation setup; precise laser pulse to thin or open the zona pellucida.",
+        "Embryo returned to culture until transfer timing.",
+        "Embryo transfer per clinical plan."
       ]
     },
     effects: {
       content: [
-        "Mild cramping or bloating",
-        "Spotting for a day or two",
-        "Temporary breast tenderness or injection-site discomfort (if medications were used)",
-        "Contact your clinician for severe pain, fever, or heavy bleeding"
+        "The procedure is performed on the embryo in the lab; patients typically do not feel procedural effects beyond standard IVF processes.",
+        "Follow clinic guidance on rest and medications after embryo transfer.",
+        "Contact the care team for any concerns post-transfer."
       ]
     },
     success: {
       content: [
-        "Outcomes depend on age, diagnosis, egg and sperm quality, and clinical factors. Your care team will discuss individualized expectations and clinic results relevant to your profile."
+        "Benefit depends on patient profile (e.g., advanced maternal age, previous IVF failure, thick zona pellucida, certain embryo features). Your specialist will discuss individualized expectations and when LAH may be recommended."
       ]
     }
   };
@@ -81,14 +87,14 @@ const ICSI = () => {
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center pt-10 sm:pt-14 md:pt-16">
           <div className="bg-white bg-opacity-50 p-6 sm:p-8 rounded-lg inline-block">
             <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 text-center">
-              ICSI - Intracytoplasmic Sperm Injection
+              Laser Assisted Hatching
             </h1>
           </div>
         </div>
       </section>
 
-      {/* Section 2 — What is ICSI? */}
-      <section id="what-is-icsi" className="py-12 sm:py-16 bg-white">
+      {/* Section 2 — What is Laser Assisted Hatching (LAH)? */}
+      <section id="what-is-lah" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="rounded-xl shadow-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">
@@ -96,16 +102,16 @@ const ICSI = () => {
                 <div className="absolute inset-0 bg-pink-100 opacity-20"></div>
                 <div className="aspect-square w-full">
                   <img 
-                    src="/assets/images/icsi.jpeg" 
-                    alt="ICSI illustration showing embryo and micropipette" 
+                    src="/assets/images/laser_assissted_hatching.jpeg" 
+                    alt="Embryo/zygote illustration with sperm around it" 
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
               <div className="md:w-3/5 p-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is ICSI?</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is Laser Assisted Hatching (LAH)?</h2>
                 <p className="text-gray-700 mb-4">
-                  ICSI stands for Intracytoplasmic Sperm Injection. It's an assisted reproductive technique used during in vitro fertilization (IVF) where a single sperm is directly injected into an egg to facilitate fertilization. This method is particularly helpful in cases of male infertility or when previous attempts at fertilization during IVF have been unsuccessful.
+                  Laser Assisted Hatching is a specialized procedure utilized by assisted reproductive technology (ART) to assist the embryo attach to the uterine wall during the IVF process through delicately supporting the embryo in breaking through its protective outer layer, known as the zona pellucida.
                 </p>
               </div>
             </div>
@@ -113,8 +119,8 @@ const ICSI = () => {
         </div>
       </section>
 
-      {/* Section 3 — ICSI Details Tabs */}
-      <section id="icsi-tabs" className="py-12 sm:py-16 bg-pink-50" style={{ backgroundColor: '#FFF0F7' }}>
+      {/* Section 3 — LAH Details Tabs */}
+      <section id="lah-tabs" className="py-12 sm:py-16 bg-pink-50" style={{ backgroundColor: '#FFF0F7' }}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Tabs List with Baby Progress Indicator */}
@@ -183,12 +189,15 @@ const ICSI = () => {
                   </div>
                 )}
                 
-                {activeTab === 'risks' && (
-                  <div>
-                    {tabContent.risks.content.map((item, index) => (
-                      <p key={index} className="text-gray-700 mb-4 last:mb-0">{item}</p>
+                {activeTab === 'treatment' && (
+                  <ul className="space-y-4">
+                    {tabContent.treatment.content.map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-pink-500 mr-3 mt-1 flex-shrink-0">•</span>
+                        <span className="text-gray-700 break-words">{item}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 )}
                 
                 {activeTab === 'effects' && (
@@ -244,4 +253,4 @@ const ICSI = () => {
   );
 };
 
-export default ICSI;
+export default LaserAssistedHatching;

@@ -5,17 +5,17 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import MeetOurFertilityExpert from './pages/MeetOurFertilityExpert';
-import IVF from './pages/IVF';
-import IUI from './pages/IUI';
-import ICSI from './pages/ICSI';
-import Laparoscopy from './pages/Laparoscopy';
-import LaserAssistedHatching from './pages/LaserAssistedHatching';
-import BlastocystCultureAndTransfer from './pages/BlastocystCultureAndTransfer';
-import Hysteroscopy from './pages/Hysteroscopy';
-import AboutFertility from './pages/AboutFertility';
-import MaleFertilityProblems from './pages/MaleFertilityProblems';
-import FemaleInfertilityProblems from './pages/FemaleInfertilityProblems';
-import InfertilityProblems from './pages/InfertilityProblems';
+import IVF from './pages/services/IVF';
+import IUI from './pages/services/IUI';
+import ICSI from './pages/services/ICSI';
+import Laparoscopy from './pages/services/Laparoscopy';
+import LaserAssistedHatching from './pages/services/LaserAssistedHatching';
+import BlastocystCultureAndTransfer from './pages/services/BlastocystCultureAndTransfer';
+import Hysteroscopy from './pages/services/Hysteroscopy';
+import AboutFertilityIndex from './pages/about-fertility';
+import MaleFertilityProblems from './pages/about-fertility/MaleFertilityProblems';
+import FemaleInfertilityProblems from './pages/about-fertility/FemaleInfertilityProblems';
+import InfertilityProblems from './pages/about-fertility/InfertilityProblems';
 import Articles from './pages/Articles';
 import Video from './pages/Video';
 import ContactUs from './pages/ContactUs';
@@ -41,7 +41,7 @@ function App() {
             <Route path="/services/laser-assisted-hatching" element={<LaserAssistedHatching />} />
             <Route path="/services/blastocyst-culture-and-transfer" element={<BlastocystCultureAndTransfer />} />
             <Route path="/services/hysteroscopy" element={<Hysteroscopy />} />
-            <Route path="/about-fertility" element={<AboutFertility />} />
+            <Route path="/about-fertility" element={<AboutFertilityIndex />} />
             <Route path="/about-fertility/male-fertility-problems" element={<MaleFertilityProblems />} />
             <Route path="/about-fertility/female-infertility-problems" element={<FemaleInfertilityProblems />} />
             <Route path="/about-fertility/infertility-problems" element={<InfertilityProblems />} />

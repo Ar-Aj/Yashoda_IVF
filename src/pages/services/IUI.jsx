@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Button from '../components/ui/Button';
+import Button from '../../components/ui/Button';
 
-const Hysteroscopy = () => {
+const IUI = () => {
   const [activeTab, setActiveTab] = useState('why');
   const tabListRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -17,49 +17,49 @@ const Hysteroscopy = () => {
     why: {
       content: [
         {
-          title: "Precision Diagnosis:",
-          text: "Yashoda Fertility & IVF Center employs hysteroscopy as a precise diagnostic tool to examine the uterus. This minimally invasive procedure allows for detailed visual inspection, aiding in the accurate assessment of various fertility-related issues."
+          title: "Sperm Enhancement:",
+          text: "IUI places washed and concentrated sperm directly into the uterus, improving chances of fertilization."
         },
         {
-          title: "Tailored Treatment:",
-          text: "Hysteroscopy plays a crucial role in shaping personalized treatment plans. Our specialists identify specific uterus problems, enabling us to create targeted solutions for better fertility outcomes."
+          title: "Cervical Factor:",
+          text: "Helps bypass cervical mucus issues that might impede sperm movement."
         },
         {
-          title: "Improved Success Rates:",
-          text: "Using hysteroscopy has significantly boosted our success rates in fertility treatments. By addressing potential barriers to conception in the uterus, we've increased the chances of successful pregnancies."
+          title: "Unexplained Infertility:",
+          text: "An initial fertility treatment for couples with unknown causes of infertility."
         },
         {
-          title: "Minimized Risks:",
-          text: "Compared to older methods, hysteroscopy is safer, with fewer risks like infections and quicker recovery times. This ensures a safer and faster healing process for our patients."
-        },
-        {
-          title: "Effective Intervention:",
-          text: "At Yashoda Fertility & IVF Center, hysteroscopy is an effective intervention for various uterus-related fertility issues. This precise technique improves the chances of successful treatment outcomes."
-        },
-        {
-          title: "Patient-Centric Care:",
-          text: "We're committed to providing comprehensive support throughout the hysteroscopy journey. Prioritizing patient comfort and personalized attention is central to our approach."
+          title: "Mild Male Factor Infertility:",
+          text: "Assists couples where the male partner has low sperm count or motility."
         }
       ]
     },
     treatment: {
       content: [
-        "Pre-procedure evaluation; anesthesia plan as indicated.",
-        "Insertion of hysteroscope through cervix to visualize uterine cavity.",
-        "Diagnostic assessment; therapeutic steps if required (e.g., polyp removal, adhesiolysis).",
-        "Post-procedure recovery and personalized follow-up plan."
+        "Ovulation monitoring or mild stimulation and timing.",
+        "Sperm collection and laboratory washing.",
+        "Insemination via thin catheter into the uterus (quick, usually painless).",
+        "Brief rest, then normal activities; pregnancy test about 14 days later."
       ]
     },
     effects: {
       content: [
-        "Mild cramping or spotting for a day or two.",
-        "Temporary discomfort managed with routine care.",
-        "Contact the care team for fever, severe pain, heavy bleeding, or unusual discharge."
+        {
+          intro: "Typical mild effects:",
+          items: [
+            "Mild cramping or bloating",
+            "Spotting for a day or two",
+            "Temporary breast tenderness or injection-site discomfort (if meds used)"
+          ]
+        },
+        {
+          note: "Contact your clinician for severe pain, fever, or heavy bleeding."
+        }
       ]
     },
     success: {
       content: [
-        "Outcomes depend on diagnosis, extent of findings, and subsequent treatment plan. Your specialist will provide individualized expectations based on your clinical profile."
+        "Success rates depend on age, diagnosis, ovarian stimulation, and cycle count. Many clinics report average rates around 10–20% per cycle, with improved chances across 2–3 attempts, individualized by your specialist."
       ]
     }
   };
@@ -87,14 +87,14 @@ const Hysteroscopy = () => {
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center pt-10 sm:pt-14 md:pt-16">
           <div className="bg-white bg-opacity-50 p-6 sm:p-8 rounded-lg inline-block">
             <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 text-center">
-              Hysteroscopy
+              IUI - Intrauterine Insemination Treatment
             </h1>
           </div>
         </div>
       </section>
 
-      {/* Section 2 — What is Hysteroscopy? */}
-      <section id="what-is-hysteroscopy" className="py-12 sm:py-16 bg-white">
+      {/* Section 2 — What is IUI? */}
+      <section id="what-is-iui" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="rounded-xl shadow-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">
@@ -102,16 +102,16 @@ const Hysteroscopy = () => {
                 <div className="absolute inset-0 bg-pink-100 opacity-20"></div>
                 <div className="aspect-square w-full">
                   <img 
-                    src="/assets/images/hysteroscopy.jpeg" 
-                    alt="Uterus/diagnostic illustration (pink theme)" 
+                    src="/assets/images/iui.jpeg" 
+                    alt="IUI illustration showing uterus and sperm" 
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
               <div className="md:w-3/5 p-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is Hysteroscopy?</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is IUI?</h2>
                 <p className="text-gray-700 mb-4">
-                  Hysteroscopy is a minimally invasive medical procedure that involves passing a thin, lighted tube called a hysteroscope through the vagina and cervix into the uterus. It is a diagnostic and occasionally therapeutic procedure used to examine and treat various uterine conditions.
+                  Intrauterine insemination (IUI) is a fertility treatment that involves placing sperm inside a woman's uterus to facilitate fertilization. The goal of IUI is to increase the number of sperm that reach the fallopian tubes and subsequently increase the chance of fertilization.
                 </p>
               </div>
             </div>
@@ -119,8 +119,8 @@ const Hysteroscopy = () => {
         </div>
       </section>
 
-      {/* Section 3 — Hysteroscopy Details Tabs */}
-      <section id="hysteroscopy-tabs" className="py-12 sm:py-16 bg-pink-50" style={{ backgroundColor: '#FFF0F7' }}>
+      {/* Section 3 — IUI Details Tabs */}
+      <section id="iui-tabs" className="py-12 sm:py-16 bg-pink-50" style={{ backgroundColor: '#FFF0F7' }}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Tabs List with Baby Progress Indicator */}
@@ -201,14 +201,26 @@ const Hysteroscopy = () => {
                 )}
                 
                 {activeTab === 'effects' && (
-                  <ul className="space-y-4">
-                    {tabContent.effects.content.map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-pink-500 mr-3 mt-1 flex-shrink-0">•</span>
-                        <span className="text-gray-700 break-words">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="space-y-6">
+                    {tabContent.effects.content[0].intro && (
+                      <p className="text-gray-700 font-medium">{tabContent.effects.content[0].intro}</p>
+                    )}
+                    <ul className="space-y-4">
+                      {tabContent.effects.content[0].items.map((item, index) => (
+                        <li key={index} className="flex items-start">
+                          <span className="text-pink-500 mr-3 mt-1 flex-shrink-0">•</span>
+                          <span className="text-gray-700 break-words">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {tabContent.effects.content[1].note && (
+                      <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                        <p className="text-gray-700">
+                          <span className="font-bold">Note:</span> {tabContent.effects.content[1].note}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 )}
                 
                 {activeTab === 'success' && (
@@ -233,7 +245,7 @@ const Hysteroscopy = () => {
                 Get a FREE appointment with one of our fertility experts today!
               </h3>
               <p className="text-gray-700">
-                Make an appointment with an experienced fertility doctor now to discuss your IVF choices and develop a treatment plan.
+                Make an appointment with an experienced fertility doctor now to discuss your IUI choices and develop a treatment plan.
               </p>
             </div>
             <div className="md:w-1/3 w-full flex justify-center">
@@ -253,4 +265,4 @@ const Hysteroscopy = () => {
   );
 };
 
-export default Hysteroscopy;
+export default IUI;

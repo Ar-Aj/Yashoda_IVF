@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Button from '../components/ui/Button';
+import Button from '../../components/ui/Button';
 
-const LaserAssistedHatching = () => {
+const BlastocystCultureAndTransfer = () => {
   const [activeTab, setActiveTab] = useState('why');
   const tabListRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -17,49 +17,44 @@ const LaserAssistedHatching = () => {
     why: {
       content: [
         {
-          title: "Precise Embryo Enhancement:",
-          text: "Yashoda Fertility & IVF Centre employs laser-assisted hatching as a precise technique to aid embryo implantation. This procedure involves creating a small opening in the embryo's outer layer, facilitating better attachment to the uterine lining during IVF."
+          title: "Optimal Embryo Development:",
+          text: "At Yashoda Fertility & IVF Centre, we employ Blastocyst Culture and Transfer to allow embryos to develop to a more advanced stage (blastocyst) before implantation. This enhances the chances of a successful pregnancy."
         },
         {
-          title: "Advanced Technology:",
-          text: "We utilize state-of-the-art laser technology for this delicate procedure. The precision and accuracy of the laser ensure controlled and minimal manipulation, safeguarding the embryo's viability."
+          title: "Enhanced Selection Process:",
+          text: "By culturing embryos to the blastocyst stage, our specialists can better assess their quality, aiding in the selection of the most viable embryos for transfer. This improves the likelihood of a successful pregnancy."
         },
         {
-          title: "Enhanced Implantation Rates:",
-          text: "Laser-assisted hatching has shown promising results in improving implantation rates during IVF cycles. This technique assists in creating an optimal environment for successful embryo attachment, thereby increasing the chances of conception."
+          title: "Improved Pregnancy Rates:",
+          text: "Utilizing Blastocyst Culture and Transfer has shown increased success rates in achieving pregnancy. This advanced technique aligns with our commitment to offering our patients the best possible chances of conception."
         },
         {
-          title: "Personalized Approach:",
-          text: "Our specialists tailor this procedure to suit each patient's specific needs, ensuring a higher probability of successful outcomes."
+          title: "Personalized Patient Care:",
+          text: "Our skilled team at Yashoda Fertility & IVF Centre specializes in customizing fertility treatments. Blastocyst Culture and Transfer allows us to tailor the procedure to each patient's specific needs, optimizing their chances of a successful outcome."
         },
         {
-          title: "Comprehensive Expertise:",
-          text: "Our skilled team has extensive experience in performing laser-assisted hatching procedures. Their expertise, coupled with cutting-edge technology, ensures the highest standards of care and improved results for our patients."
-        },
-        {
-          title: "Supportive Environment:",
-          text: "Patients undergoing laser-assisted hatching at our centre receive comprehensive support and guidance throughout the process. We prioritize patient comfort and understanding, fostering a supportive environment for their fertility journey."
+          title: "Continuous Support:",
+          text: "Patients undergoing Blastocyst Culture and Transfer receive comprehensive support and guidance throughout the process. Our goal is to ensure comfort, understanding, and confidence during this crucial stage of fertility treatment."
         }
       ]
     },
     treatment: {
       content: [
-        "Embryo evaluation by the embryologist.",
-        "Micromanipulation workstation setup; precise laser pulse to thin or open the zona pellucida.",
-        "Embryo returned to culture until transfer timing.",
-        "Embryo transfer per clinical plan."
+        "Fertilization and early embryo culture.",
+        "Extended culture to day 5/6 to reach blastocyst stage; morphological/other assessments.",
+        "Selection of highest-quality blastocyst(s) per clinical plan.",
+        "Embryo transfer into the uterus; luteal support and follow-up."
       ]
     },
     effects: {
       content: [
-        "The procedure is performed on the embryo in the lab; patients typically do not feel procedural effects beyond standard IVF processes.",
-        "Follow clinic guidance on rest and medications after embryo transfer.",
-        "Contact the care team for any concerns post-transfer."
+        "Patients generally experience standard post-transfer guidance similar to IVF.",
+        "Follow clinic advice on rest and medications; report any unusual symptoms to the care team."
       ]
     },
     success: {
       content: [
-        "Benefit depends on patient profile (e.g., advanced maternal age, previous IVF failure, thick zona pellucida, certain embryo features). Your specialist will discuss individualized expectations and when LAH may be recommended."
+        "Outcomes depend on age, embryo quality, and clinical factors. Extended culture may improve selection and implantation prospects for appropriate cases. Your specialist will discuss individualized expectations."
       ]
     }
   };
@@ -87,14 +82,14 @@ const LaserAssistedHatching = () => {
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center pt-10 sm:pt-14 md:pt-16">
           <div className="bg-white bg-opacity-50 p-6 sm:p-8 rounded-lg inline-block">
             <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 text-center">
-              Laser Assisted Hatching
+              Blastocyst Culture and Transfer
             </h1>
           </div>
         </div>
       </section>
 
-      {/* Section 2 — What is Laser Assisted Hatching (LAH)? */}
-      <section id="what-is-lah" className="py-12 sm:py-16 bg-white">
+      {/* Section 2 — What is Blastocyst Culture and Transfer? */}
+      <section id="what-is-blastocyst" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="rounded-xl shadow-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">
@@ -102,16 +97,16 @@ const LaserAssistedHatching = () => {
                 <div className="absolute inset-0 bg-pink-100 opacity-20"></div>
                 <div className="aspect-square w-full">
                   <img 
-                    src="/assets/images/laser_assissted_hatching.jpeg" 
-                    alt="Embryo/zygote illustration with sperm around it" 
+                    src="/assets/images/Blastocyst_Culture_Transfer.jpeg" 
+                    alt="Embryology/IVF lab illustration (embryo dish + micropipette)" 
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
               <div className="md:w-3/5 p-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is Laser Assisted Hatching (LAH)?</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is Blastocyst Culture and Transfer?</h2>
                 <p className="text-gray-700 mb-4">
-                  Laser Assisted Hatching is a specialized procedure utilized by assisted reproductive technology (ART) to assist the embryo attach to the uterine wall during the IVF process through delicately supporting the embryo in breaking through its protective outer layer, known as the zona pellucida.
+                  Blastocyst cultivation and transfer require developing embryos in a lab for a few days before implanting them in the uterus; this advanced approach improves embryo selection, increasing the odds of a successful pregnancy during IVF.
                 </p>
               </div>
             </div>
@@ -119,8 +114,8 @@ const LaserAssistedHatching = () => {
         </div>
       </section>
 
-      {/* Section 3 — LAH Details Tabs */}
-      <section id="lah-tabs" className="py-12 sm:py-16 bg-pink-50" style={{ backgroundColor: '#FFF0F7' }}>
+      {/* Section 3 — Blastocyst Details Tabs */}
+      <section id="blastocyst-tabs" className="py-12 sm:py-16 bg-pink-50" style={{ backgroundColor: '#FFF0F7' }}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Tabs List with Baby Progress Indicator */}
@@ -253,4 +248,4 @@ const LaserAssistedHatching = () => {
   );
 };
 
-export default LaserAssistedHatching;
+export default BlastocystCultureAndTransfer;

@@ -1,65 +1,65 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Button from '../components/ui/Button';
+import Button from '../../components/ui/Button';
 
-const IUI = () => {
-  const [activeTab, setActiveTab] = useState('why');
+const FemaleInfertilityProblems = () => {
+  const [activeTab, setActiveTab] = useState('causes');
   const tabListRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const tabs = [
-    { id: 'why', label: 'Why' },
+    { id: 'causes', label: 'Causes' },
+    { id: 'symptoms', label: 'Symptoms' },
     { id: 'treatment', label: 'Treatment' },
-    { id: 'effects', label: 'Post Procedure Effects' },
-    { id: 'success', label: 'Success Rate' }
+    { id: 'prevention', label: 'Prevention' }
   ];
 
   const tabContent = {
-    why: {
+    causes: {
       content: [
         {
-          title: "Sperm Enhancement:",
-          text: "IUI places washed and concentrated sperm directly into the uterus, improving chances of fertilization."
+          title: "Ovulation Problems",
+          description: "Sometimes, irregular ovulation or the absence of ovulation altogether can lead to infertility. Conditions like polycystic ovary syndrome (PCOS) or hormonal imbalances can affect the release of eggs, making it harder to conceive."
         },
         {
-          title: "Cervical Factor:",
-          text: "Helps bypass cervical mucus issues that might impede sperm movement."
+          title: "Issues with the Reproductive System",
+          description: "Structural problems within the reproductive system, such as blocked fallopian tubes due to infections, endometriosis, or fibroids in the uterus, can hinder the egg's journey or implantation, causing infertility."
         },
         {
-          title: "Unexplained Infertility:",
-          text: "An initial fertility treatment for couples with unknown causes of infertility."
+          title: "Age-Related Factors",
+          description: "As women age, the quantity and quality of their eggs decrease, making conception more challenging. This natural decline in fertility becomes more pronounced after the age of 35."
         },
         {
-          title: "Mild Male Factor Infertility:",
-          text: "Assists couples where the male partner has low sperm count or motility."
+          title: "Lifestyle and Environmental Factors",
+          description: "Factors like excessive stress, unhealthy diet, smoking, alcohol consumption, or exposure to certain environmental toxins can also impact fertility by affecting hormone levels or damaging reproductive organs."
         }
+      ]
+    },
+    symptoms: {
+      content: [
+        "Most women will not have obvious symptoms other than difficulty conceiving.",
+        "Additional possible signs:",
+        "● Irregular or absent menstrual periods",
+        "● Pain during sex or menstruation (potential sign of endometriosis or fibroids)",
+        "● Hormonal changes—acne, changes in hair growth, weight",
+        "● Other underlying symptoms if related to a disorder"
       ]
     },
     treatment: {
       content: [
-        "Ovulation monitoring or mild stimulation and timing.",
-        "Sperm collection and laboratory washing.",
-        "Insemination via thin catheter into the uterus (quick, usually painless).",
-        "Brief rest, then normal activities; pregnancy test about 14 days later."
+        "Treatment depends on the underlying cause. Options may include:",
+        "● Medications for hormonal imbalances or ovulation stimulation",
+        "● Surgery for blockages or endometriosis",
+        "● Lifestyle changes: healthy weight, quitting smoking, reduced alcohol, stress management",
+        "● Assisted reproductive technology like IUI, IVF, or ICSI if needed"
       ]
     },
-    effects: {
+    prevention: {
       content: [
-        {
-          intro: "Typical mild effects:",
-          items: [
-            "Mild cramping or bloating",
-            "Spotting for a day or two",
-            "Temporary breast tenderness or injection-site discomfort (if meds used)"
-          ]
-        },
-        {
-          note: "Contact your clinician for severe pain, fever, or heavy bleeding."
-        }
-      ]
-    },
-    success: {
-      content: [
-        "Success rates depend on age, diagnosis, ovarian stimulation, and cycle count. Many clinics report average rates around 10–20% per cycle, with improved chances across 2–3 attempts, individualized by your specialist."
+        "Certain cases may not be preventable, but you can lower your risk by:",
+        "● Maintaining a healthy weight",
+        "● Not smoking, limiting alcohol, and reducing stress",
+        "● Seeking early treatment for infections or cycle issues",
+        "● Regular checkups for reproductive health"
       ]
     }
   };
@@ -82,19 +82,25 @@ const IUI = () => {
   return (
     <main>
       {/* Section 1 — Hero */}
-      <section id="hero" className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] bg-cover bg-center" style={{ backgroundImage: "url('/assets/images/hero-services.jpeg')" }}>
+      <section id="hero" className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] bg-cover bg-center" style={{ backgroundImage: "url('/assets/images/hero-hands-baby.jpg')" }}>
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center pt-10 sm:pt-14 md:pt-16">
           <div className="bg-white bg-opacity-50 p-6 sm:p-8 rounded-lg inline-block">
             <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 text-center">
-              IUI - Intrauterine Insemination Treatment
+              Female Infertility Problems
             </h1>
           </div>
         </div>
+        {/* Pink wave divider */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" className="fill-pink-500">
+            <path d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,74.7C1120,75,1280,53,1360,42.7L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+          </svg>
+        </div>
       </section>
 
-      {/* Section 2 — What is IUI? */}
-      <section id="what-is-iui" className="py-12 sm:py-16 bg-white">
+      {/* Section 2 — What is Female Infertility? */}
+      <section id="what-is-female-infertility" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="rounded-xl shadow-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">
@@ -102,16 +108,16 @@ const IUI = () => {
                 <div className="absolute inset-0 bg-pink-100 opacity-20"></div>
                 <div className="aspect-square w-full">
                   <img 
-                    src="/assets/images/iui.jpeg" 
-                    alt="IUI illustration showing uterus and sperm" 
+                    src="/assets/images/female-infertility-illustration.jpg" 
+                    alt="Doctor discussing fertility with patient" 
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
               <div className="md:w-3/5 p-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is IUI?</h2>
-                <p className="text-gray-700 mb-4">
-                  Intrauterine insemination (IUI) is a fertility treatment that involves placing sperm inside a woman's uterus to facilitate fertilization. The goal of IUI is to increase the number of sperm that reach the fallopian tubes and subsequently increase the chance of fertilization.
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is Female Infertility?</h2>
+                <p className="text-gray-700">
+                  Female infertility encompasses challenges in conceiving or carrying a pregnancy due to issues with ovulation, reproductive organs, hormones, or health conditions like endometriosis. It involves difficulties in egg release, movement through fallopian tubes, or egg implantation in the uterus.
                 </p>
               </div>
             </div>
@@ -119,8 +125,8 @@ const IUI = () => {
         </div>
       </section>
 
-      {/* Section 3 — IUI Details Tabs */}
-      <section id="iui-tabs" className="py-12 sm:py-16 bg-pink-50" style={{ backgroundColor: '#FFF0F7' }}>
+      {/* Section 3 — Tabbed Section (Causes, Symptoms, Treatment, Prevention) */}
+      <section id="female-infertility-details" className="py-12 sm:py-16 bg-pink-50" style={{ backgroundColor: '#FFF0F7' }}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Tabs List with Baby Progress Indicator */}
@@ -160,7 +166,7 @@ const IUI = () => {
               
               {/* Custom progress bar with baby indicator - now below the buttons */}
               <div className="relative mt-2 w-full">
-                <div className="h-1 bg-gray-300 rounded-full overflow-hidden">
+                <div className="h-3 bg-gray-300 rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-gray-500 rounded-full transition-all duration-300" 
                     style={{ width: `${scrollProgress}%` }}
@@ -178,57 +184,30 @@ const IUI = () => {
             {/* Content Panel */}
             <div className="lg:w-2/3">
               <div className="bg-white rounded-xl p-6 shadow-md">
-                {activeTab === 'why' && (
+                {activeTab !== 'symptoms' && activeTab !== 'treatment' && activeTab !== 'prevention' ? (
                   <div className="space-y-6">
-                    {tabContent.why.content.map((item, index) => (
+                    {tabContent[activeTab].content.map((item, index) => (
                       <div key={index}>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                        <p className="text-gray-700">{item.text}</p>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
+                        <p className="text-gray-700">{item.description}</p>
                       </div>
                     ))}
                   </div>
-                )}
-                
-                {activeTab === 'treatment' && (
+                ) : (
                   <ul className="space-y-4">
-                    {tabContent.treatment.content.map((item, index) => (
+                    {tabContent[activeTab].content.map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="text-pink-500 mr-3 mt-1 flex-shrink-0">•</span>
-                        <span className="text-gray-700 break-words">{item}</span>
+                        {item.startsWith('●') ? (
+                          <>
+                            <span className="text-pink-500 mr-3 mt-1 flex-shrink-0">•</span>
+                            <span className="text-gray-700 break-words" style={{ wordBreak: 'break-word' }}>{item.substring(1).trim()}</span>
+                          </>
+                        ) : (
+                          <span className="text-gray-700 break-words" style={{ wordBreak: 'break-word' }}>{item}</span>
+                        )}
                       </li>
                     ))}
                   </ul>
-                )}
-                
-                {activeTab === 'effects' && (
-                  <div className="space-y-6">
-                    {tabContent.effects.content[0].intro && (
-                      <p className="text-gray-700 font-medium">{tabContent.effects.content[0].intro}</p>
-                    )}
-                    <ul className="space-y-4">
-                      {tabContent.effects.content[0].items.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="text-pink-500 mr-3 mt-1 flex-shrink-0">•</span>
-                          <span className="text-gray-700 break-words">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    {tabContent.effects.content[1].note && (
-                      <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-                        <p className="text-gray-700">
-                          <span className="font-bold">Note:</span> {tabContent.effects.content[1].note}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                )}
-                
-                {activeTab === 'success' && (
-                  <div>
-                    {tabContent.success.content.map((item, index) => (
-                      <p key={index} className="text-gray-700 mb-4 last:mb-0">{item}</p>
-                    ))}
-                  </div>
                 )}
               </div>
             </div>
@@ -236,7 +215,7 @@ const IUI = () => {
         </div>
       </section>
 
-      {/* Section 4 — CTA Stripe */}
+      {/* Section 4 — Global CTA Stripe */}
       <section id="cta" className="py-12 sm:py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-8">
@@ -245,7 +224,7 @@ const IUI = () => {
                 Get a FREE appointment with one of our fertility experts today!
               </h3>
               <p className="text-gray-700">
-                Make an appointment with an experienced fertility doctor now to discuss your IUI choices and develop a treatment plan.
+                Make an appointment with an experienced fertility doctor now to discuss your IVF choices and develop a treatment plan.
               </p>
             </div>
             <div className="md:w-1/3 w-full flex justify-center">
@@ -265,4 +244,4 @@ const IUI = () => {
   );
 };
 
-export default IUI;
+export default FemaleInfertilityProblems;

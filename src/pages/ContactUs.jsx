@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Button from '../components/ui/Button';
-import { sendContactEmail } from '../utils/email';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -123,31 +122,44 @@ const ContactUs = () => {
     if (validateForm()) {
       setIsSubmitting(true);
       try {
-        // Send email directly from frontend
-        await sendContactEmail({
-          name: formData.name,
-          phone: formData.phone,
-          queries: formData.queries,
-          location: formData.location
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            phone: formData.phone,
+            queries: formData.queries,
+            location: formData.location
+          }),
         });
         
-        console.log('Form submitted successfully');
-        setIsSubmitted(true);
+        const result = await response.json();
         
-        // Reset form after 5 seconds
-        setTimeout(() => {
-          setFormData({
-            name: '',
-            phone: '',
-            queries: '',
-            location: '',
-            recaptcha: false
-          });
-          setIsSubmitted(false);
-        }, 5000);
+        if (response.ok) {
+          console.log('Form submitted successfully:', result);
+          setIsSubmitted(true);
+          
+          // Reset form after 5 seconds
+          setTimeout(() => {
+            setFormData({
+              name: '',
+              phone: '',
+              queries: '',
+              location: '',
+              recaptcha: false
+            });
+            setIsSubmitted(false);
+          }, 5000);
+        } else {
+          // Handle server errors
+          console.error('Server error:', result.error);
+          setErrors({ submit: result.error || 'Failed to submit form. Please try again.' });
+        }
       } catch (error) {
-        console.error('Error sending email:', error);
-        setErrors({ submit: 'Failed to send message. Please try again later.' });
+        console.error('Network error:', error);
+        setErrors({ submit: 'Network error. Please check your connection and try again.' });
       } finally {
         setIsSubmitting(false);
       }

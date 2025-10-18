@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Button from '../components/ui/Button';
+import Button from '../../components/ui/Button';
 
-const Laparoscopy = () => {
+const IVF = () => {
   const [activeTab, setActiveTab] = useState('why');
   const tabListRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -15,41 +15,36 @@ const Laparoscopy = () => {
 
   const tabContent = {
     why: {
+      intro: "IVF may be suggested for couples who are having difficulty developing owing to a variety of problems like:",
       content: [
-        {
-          title: "Precise Diagnostic Tool:",
-          text: "Our centre uses laparoscopy as a precise diagnostic tool to examine abdominal and pelvic cavities. The small camera provides detailed visuals, aiding in accurate assessments of fertility-related issues."
-        },
-        {
-          title: "Effective Treatment Option:",
-          text: "For various fertility concerns, laparoscopy serves as an effective treatment option. It allows our skilled specialists to perform procedures with precision, enhancing the chances of successful outcomes."
-        },
-        {
-          title: "Unexplained Infertility: Reduced Risks:",
-          text: "It's an initial fertility treatment for couples with unknown causes of infertility."
-        }
+        "Ovulation disorders — it happens if no reason of infertility can be found, even complete testing.",
+        "Unresolved infertility — These conditions, such as polycystic ovarian syndrome, also known as PCOS or not normal hormone levels, may affect egg release, reducing fertility.",
+        "Male factor infertility — occurs when a male’s number of sperm, motility, or shape becomes abnormal."
       ]
     },
     treatment: {
+      intro: "",
       content: [
-        "Pre-operative evaluation and imaging as indicated.",
-        "Short general anesthesia; small keyhole incisions.",
-        "Insertion of laparoscope and instruments for evaluation/treatment (adhesions, endometriosis, cysts, etc.).",
-        "Closure and recovery with post-operative guidance."
+        "Ovarian stimulation and monitoring",
+        "Egg retrieval and sperm collection",
+        "Fertilization (IVF/ICSI) and embryo culture",
+        "Embryo transfer and luteal support",
+        "Pregnancy testing and follow‑up"
       ]
     },
     effects: {
+      intro: "",
       content: [
-        "Mild abdominal discomfort or bloating from insufflation gas.",
-        "Temporary shoulder-tip pain (referred), usually short-lived.",
-        "Small incision-site soreness; light activity recommended.",
-        "Seek care for fever, severe pain, heavy bleeding, or wound issues."
+        "Mild cramping or bloating",
+        "Spotting after procedures",
+        "Temporary breast tenderness",
+        "Injection site discomfort",
+        "Report severe pain, fever, or heavy bleeding immediately"
       ]
     },
     success: {
-      content: [
-        "Outcomes depend on indication (e.g., endometriosis, adhesions), overall health, and subsequent fertility plan. Your specialist will outline expectations tailored to your condition."
-      ]
+      intro: "",
+      content: ["Success rates depend on age, ovarian reserve, embryo quality, and clinical factors. Your specialist will discuss individualized expectations and the clinic's outcomes for your profile."]
     }
   };
 
@@ -76,14 +71,14 @@ const Laparoscopy = () => {
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center pt-10 sm:pt-14 md:pt-16">
           <div className="bg-white bg-opacity-50 p-6 sm:p-8 rounded-lg inline-block">
             <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 text-center">
-              Laparoscopy
+              IVF - In Vitro Fertilization Treatment
             </h1>
           </div>
         </div>
       </section>
 
-      {/* Section 2 — What is Laparoscopy? */}
-      <section id="what-is-laparoscopy" className="py-12 sm:py-16 bg-white">
+      {/* Section 2 — What is IVF? */}
+      <section id="what-is-ivf" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="rounded-xl shadow-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">
@@ -91,16 +86,16 @@ const Laparoscopy = () => {
                 <div className="absolute inset-0 bg-pink-100 opacity-20"></div>
                 <div className="aspect-square w-full">
                   <img 
-                    src="/assets/images/laparoscopy.jpeg" 
-                    alt="Surgeons performing laparoscopy illustration" 
+                    src="/assets/images/ivf.jpeg" 
+                    alt="IVF illustration showing embryo dish and pregnant woman" 
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
               <div className="md:w-3/5 p-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is Laparoscopy?</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">What is IVF?</h2>
                 <p className="text-gray-700 mb-4">
-                  Laparoscopy, a surgical treatment, investigates and treats reproductive disorders, assisting in the precise diagnosis and treatment of fertility concerns with a rapid healing period.
+                  Female infertility encompasses challenges in conceiving or carrying a pregnancy due to issues with ovulation, reproductive organs, hormones, or health conditions like endometriosis. It involves difficulties in egg release, movement through fallopian tubes, or egg implantation in the uterus.
                 </p>
               </div>
             </div>
@@ -108,8 +103,8 @@ const Laparoscopy = () => {
         </div>
       </section>
 
-      {/* Section 3 — Laparoscopy Details Tabs */}
-      <section id="laparoscopy-tabs" className="py-12 sm:py-16 bg-pink-50" style={{ backgroundColor: '#FFF0F7' }}>
+      {/* Section 3 — IVF Details Tabs */}
+      <section id="ivf-tabs" className="py-12 sm:py-16 bg-pink-50" style={{ backgroundColor: '#FFF0F7' }}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Tabs List with Baby Progress Indicator */}
@@ -149,7 +144,7 @@ const Laparoscopy = () => {
               
               {/* Custom progress bar with baby indicator - now below the buttons */}
               <div className="relative mt-2 w-full">
-                <div className="h-1 bg-gray-300 rounded-full overflow-hidden">
+                <div className="h-3 bg-gray-300 rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-gray-500 rounded-full transition-all duration-300" 
                     style={{ width: `${scrollProgress}%` }}
@@ -167,46 +162,20 @@ const Laparoscopy = () => {
             {/* Content Panel */}
             <div className="lg:w-2/3">
               <div className="bg-white rounded-xl p-6 shadow-md">
-                {activeTab === 'why' && (
-                  <div className="space-y-6">
-                    {tabContent.why.content.map((item, index) => (
-                      <div key={index}>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                        <p className="text-gray-700">{item.text}</p>
-                      </div>
-                    ))}
-                  </div>
+                {tabContent[activeTab].intro && (
+                  <p className="text-gray-700 mb-6">
+                    {tabContent[activeTab].intro}
+                  </p>
                 )}
                 
-                {activeTab === 'treatment' && (
-                  <ul className="space-y-4">
-                    {tabContent.treatment.content.map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-pink-500 mr-3 mt-1 flex-shrink-0">•</span>
-                        <span className="text-gray-700 break-words">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                
-                {activeTab === 'effects' && (
-                  <ul className="space-y-4">
-                    {tabContent.effects.content.map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-pink-500 mr-3 mt-1 flex-shrink-0">•</span>
-                        <span className="text-gray-700 break-words">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                
-                {activeTab === 'success' && (
-                  <div>
-                    {tabContent.success.content.map((item, index) => (
-                      <p key={index} className="text-gray-700 mb-4 last:mb-0">{item}</p>
-                    ))}
-                  </div>
-                )}
+                <ul className="space-y-4">
+                  {tabContent[activeTab].content.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-pink-500 mr-3 mt-1 flex-shrink-0">•</span>
+                      <span className="text-gray-700 break-words" style={{ wordBreak: 'break-word' }}>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -242,4 +211,4 @@ const Laparoscopy = () => {
   );
 };
 
-export default Laparoscopy;
+export default IVF;
